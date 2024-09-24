@@ -387,6 +387,10 @@ $('.opn').on('click', function () {
     $(this).closest('.txt').toggleClass('open');
 });
 
+$('.promo-head').on('click', function () {
+    $(this).closest('.promo-block').toggleClass('open');
+});
+
 
 $('body').on('click', '.btn-to', function (e) {
     e.preventDefault();

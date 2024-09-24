@@ -36,6 +36,12 @@
         width: 100%;
       }
     }
+    &.btn-paypal {
+      gap: vw(15px);
+      .ic {
+        width: vw(72px);
+      }
+    }
   }
   .title {
     font-size: vw(40px);
@@ -507,11 +513,22 @@
 
     &__cont {
       gap: vw(155px);
-
+      .img-b {
+        //13px
+        width: calc(50% - 0.8125vw);
+      }
       .txt {
         span, h2 {
-          font-size: vw(24px);
+          &:not(.subtitle) {
+            font-size: vw(24px);
+          }
           margin-bottom: vw(20px);
+        }
+        p {
+          margin-bottom: vw(15px);
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -554,7 +571,7 @@
       }
     }
   }
-  //  done
+
   .select-product {
     margin-top: vw(20px);
   }
@@ -585,4 +602,96 @@
       padding: vw(15px) vw(20px);
     }
   }
+
+  .photo-process {
+    padding: vw(30px) 0;
+    &__cont {
+      gap: vw(25px);
+      .txt {
+        .subtitle, span {
+          margin-bottom: vw(10px);
+        }
+        p {
+          margin-bottom: vw(10px);
+        }
+      }
+    }
+  }
+  .variants-list {
+    gap: vw(24px);
+    .single-variant {
+      //24px
+      width: calc(25% - ((1.5000vw* 3) / 4));
+      .txt {
+        padding-right: vw(20px);
+      }
+    }
+  }
+  .requirements {
+    padding: vw(35px) 0;
+    &__list {
+      gap: vw(60px) vw(50px);
+      margin-top: vw(60px);
+    }
+  }
+  .single-req {
+    //100px
+    width: calc((100% / 3) - (6.2500vw / 3));
+    gap: vw(20px);
+    .ic {
+      width: vw(72px);
+      height: vw(72px);
+      img {
+        max-width: vw(50px);
+        max-height: vw(50px);
+      }
+    }
+    .txt {
+      span {
+        font-size: vw(20px);
+        margin-bottom: vw(10px);
+      }
+    }
+  }
+  .allowed {
+    padding: vw(35px) 0;
+    &-list {
+      gap: vw(26px);
+    }
+  }
+  .allow-image {
+    .img {
+      &::before {
+        width: vw(106px);
+        height: vw(106px);
+        top: vw(27px);
+        right: vw(20px);
+      }
+    }
+  }
+  .requirements-baby {
+    padding: vw(35px) 0;
+    &__cont {
+      .subtitle {
+        margin-bottom: vw(20px);
+      }
+    }
+    &__list {
+      margin-top: vw(60px);
+      gap: vw(30px);
+    }
+  }
+  .req-baby {
+    padding: vw(20px);
+    .ic {
+      width: vw(30px);
+      height: vw(30px);
+      margin-bottom: vw(20px);
+    }
+    .txt {
+      font-size: vw(20px);
+      margin-bottom: vw(20px);
+    }
+  }
+  //  done
 }

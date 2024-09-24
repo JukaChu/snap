@@ -190,6 +190,37 @@ $size: 16px;
     }
   }
 
+  &.btn--trans {
+    background: rgba(255, 255, 255, 0);
+    color: $black;
+    box-shadow: none;
+
+    &:hover {
+      background: $main-font;
+    }
+  }
+
+  &.btn-paypal {
+    background: #FFB800;
+    gap: 15px;
+    border-color: #FFB800;
+    box-shadow: none;
+
+    .ic {
+      width: 72px;
+      height: auto;
+      display: flex;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0);
+    }
+  }
 }
 
 //done px

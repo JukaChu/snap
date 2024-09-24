@@ -111,6 +111,12 @@
         width: vw(24px);
       }
     }
+    &.btn-paypal {
+      gap: vw(10px);
+      .ic {
+        width: vw(52px);
+      }
+    }
   }
   .title {
     font-size: vw(30px);
@@ -424,7 +430,7 @@
     height: vw(50px);
     margin-bottom: vw(18px);
   }
-  //  done
+
 
   .breadcrumbs-block {
     width: 100%;
@@ -631,7 +637,18 @@
         width: 100%;
 
         span, h2 {
-          font-size: vw(18px);
+          :not(.subtitle) {
+            font-size: vw(18px);
+          }
+
+        }
+
+        p {
+          margin-bottom: vw(15px);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
 
@@ -724,4 +741,125 @@
     width: vw(30px);
     height: vw(38px);
   }
+
+  .photo-process {
+    padding: vw(30px) 0;
+
+    &__cont {
+      gap: vw(14px);
+      flex-direction: column;
+      align-items: flex-start;
+
+      .txt {
+        width: 100%;
+      }
+
+      .img-b {
+        width: 100%;
+        margin: vw(14px) 0;
+      }
+    }
+  }
+  .variants-list {
+    gap: vw(12px);
+
+    .single-variant {
+      //6px
+      width: calc(50% - 1.5385vw);
+
+      .txt {
+        padding-right: vw(10px);
+      }
+    }
+  }
+  .requirements {
+    padding: vw(35px) 0;
+
+    &__list {
+      gap: vw(20px) vw(14px);
+    }
+  }
+  .single-req {
+    //7px
+    width: calc(50% - 1.7949vw);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: vw(14px);
+
+    .ic {
+      width: vw(70px);
+      height: vw(70px);
+
+      img {
+        max-width: vw(45px);
+        max-height: vw(45px);
+      }
+    }
+
+    .txt {
+      span {
+        font-size: vw(18px);
+        margin-bottom: vw(5px);
+      }
+    }
+  }
+  .allowed {
+    padding: vw(35px) 0;
+
+    &-list {
+      gap: vw(14px);
+      flex-wrap: wrap;
+    }
+
+    &--four {
+      .allow-image {
+        width: calc(50% - 1.7949vw);
+      }
+    }
+  }
+  .allow-image {
+    width: 100%;
+    flex: initial;
+
+    .img::before {
+      width: vw(40px);
+      height: vw(40px);
+      top: vw(10px);
+      right: vw(10px);
+    }
+  }
+  .requirements-baby {
+    padding: vw(35px) 0;
+
+    &__cont {
+      .subtitle {
+        margin-bottom: vw(10px);
+      }
+    }
+
+    &__list {
+      margin-top: vw(35px);
+      gap: vw(14px);
+    }
+  }
+  .req-baby {
+    //7px
+    width: calc(50% - 1.7949vw);
+    padding: vw(14px);
+
+    .ic {
+      width: vw(30px);
+      height: vw(30px);
+      margin-bottom: vw(14px);
+    }
+
+    .txt {
+      span {
+        font-size: vw(18px);
+        margin-bottom: vw(10px);
+      }
+    }
+  }
+  //  done
 }
