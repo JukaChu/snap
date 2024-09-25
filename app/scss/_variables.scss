@@ -200,6 +200,18 @@ $size: 16px;
     }
   }
 
+  &.btn--grey {
+    background: rgba(255, 255, 255, 0);
+    border-color: #C2CBDE;
+    color: #C2CBDE;
+    box-shadow: none;
+
+    &:hover {
+      color: $black;
+      background: #C2CBDE;
+    }
+  }
+
   &.btn-paypal {
     background: #FFB800;
     gap: 15px;

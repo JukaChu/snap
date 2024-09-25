@@ -390,6 +390,11 @@ $('.opn').on('click', function () {
 $('.promo-head').on('click', function () {
     $(this).closest('.promo-block').toggleClass('open');
 });
+$('.fake-submit').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $(this).closest('.shopping').find('.checkout-block .submit').click();
+});
 
 
 $('body').on('click', '.btn-to', function (e) {

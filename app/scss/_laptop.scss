@@ -36,8 +36,10 @@
         width: 100%;
       }
     }
+
     &.btn-paypal {
       gap: vw(15px);
+
       .ic {
         width: vw(72px);
       }
@@ -389,6 +391,7 @@
   }
   .colors-list {
     gap: vw(20px);
+
     .sg-color {
       span {
         width: vw(31px);
@@ -513,19 +516,24 @@
 
     &__cont {
       gap: vw(155px);
+
       .img-b {
         //13px
         width: calc(50% - 0.8125vw);
       }
+
       .txt {
         span, h2 {
           &:not(.subtitle) {
             font-size: vw(24px);
           }
+
           margin-bottom: vw(20px);
         }
+
         p {
           margin-bottom: vw(15px);
+
           &:last-child {
             margin-bottom: 0;
           }
@@ -578,14 +586,17 @@
   .nice-select {
     span {
       padding: vw(11px) vw(16px);
+
       &::after {
         width: vw(20px);
         height: vw(20px);
         right: vw(10px);
       }
     }
+
     .list {
       max-height: vw(260px);
+
       li {
         padding: vw(11px) vw(16px);
       }
@@ -593,11 +604,13 @@
   }
   .upload-file {
     margin: vw(20px) 0 vw(10px);
+
     .codedropz-upload-inner {
       h3, a {
         font-size: vw(20px);
       }
     }
+
     .codedropz-upload-container {
       padding: vw(15px) vw(20px);
     }
@@ -605,12 +618,15 @@
 
   .photo-process {
     padding: vw(30px) 0;
+
     &__cont {
       gap: vw(25px);
+
       .txt {
         .subtitle, span {
           margin-bottom: vw(10px);
         }
+
         p {
           margin-bottom: vw(10px);
         }
@@ -619,9 +635,11 @@
   }
   .variants-list {
     gap: vw(24px);
+
     .single-variant {
       //24px
-      width: calc(25% - ((1.5000vw* 3) / 4));
+      width: calc(25% - ((1.5000vw * 3) / 4));
+
       .txt {
         padding-right: vw(20px);
       }
@@ -629,6 +647,7 @@
   }
   .requirements {
     padding: vw(35px) 0;
+
     &__list {
       gap: vw(60px) vw(50px);
       margin-top: vw(60px);
@@ -638,14 +657,17 @@
     //100px
     width: calc((100% / 3) - (6.2500vw / 3));
     gap: vw(20px);
+
     .ic {
       width: vw(72px);
       height: vw(72px);
+
       img {
         max-width: vw(50px);
         max-height: vw(50px);
       }
     }
+
     .txt {
       span {
         font-size: vw(20px);
@@ -655,6 +677,7 @@
   }
   .allowed {
     padding: vw(35px) 0;
+
     &-list {
       gap: vw(26px);
     }
@@ -671,11 +694,13 @@
   }
   .requirements-baby {
     padding: vw(35px) 0;
+
     &__cont {
       .subtitle {
         margin-bottom: vw(20px);
       }
     }
+
     &__list {
       margin-top: vw(60px);
       gap: vw(30px);
@@ -683,14 +708,200 @@
   }
   .req-baby {
     padding: vw(20px);
+
     .ic {
       width: vw(30px);
       height: vw(30px);
       margin-bottom: vw(20px);
     }
+
     .txt {
       font-size: vw(20px);
       margin-bottom: vw(20px);
+    }
+  }
+
+  .shopping {
+    padding: vw(30px) 0;
+
+    &__cont {
+      gap: vw(24px);
+      margin-top: vw(20px);
+    }
+
+    &-right {
+      width: vw(490px);
+      padding: vw(47px) vw(50px);
+
+      &__text {
+        margin-bottom: vw(20px);
+
+        > span {
+          font-size: vw(24px);
+          margin-bottom: vw(20px);
+        }
+
+        > ul {
+          li {
+            gap: vw(10px);
+            padding: vw(5px) 0;
+
+            &.total {
+              span {
+                font-size: vw(20px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .promo-block {
+    &.open {
+      .promo-cont {
+        max-height: vw(300px);
+      }
+    }
+  }
+  .promo-head {
+    padding: vw(10px) 0;
+
+    span {
+      font-size: vw(18px);
+    }
+
+    &::after {
+      width: vw(20px);
+      height: vw(20px);
+      right: vw(10px);
+    }
+  }
+  .promo-cont {
+    .btn {
+      margin-top: vw(20px);
+    }
+
+    form {
+      padding: vw(10px) 0 0;
+    }
+  }
+  .input-wrap {
+    label {
+      margin-bottom: vw(5px);
+    }
+
+    input, textarea {
+      padding: vw(14px) vw(17px);
+      height: vw(50px);
+      font-size: vw(14px);
+    }
+
+    textarea {
+      height: vw(120px);
+    }
+  }
+  .shopping-right__btns {
+    padding-top: vw(20px);
+    margin-top: vw(20px);
+    gap: vw(20px);
+
+    .btn {
+      &.btn--big {
+        font-size: vw(20px);
+      }
+    }
+  }
+  .carts-block {
+    &__center {
+      margin-bottom: vw(20px);
+    }
+
+    &__item {
+      > p {
+        font-size: vw(16px);
+      }
+    }
+
+    &__head {
+      margin-bottom: vw(10px);
+
+      .carts-block__item {
+        padding-top: vw(12px);
+        padding-bottom: vw(12px);
+
+        &:nth-child(1) {
+          padding-left: vw(20px);
+        }
+
+        &:last-child {
+          padding-right: vw(20px);
+        }
+      }
+    }
+
+    &__line {
+      padding: vw(10px) 0;
+    }
+  }
+
+  .cart-item {
+    gap: vw(28px);
+
+    .img {
+      width: vw(120px);
+      height: vw(120px);
+    }
+  }
+  .carts-block__line {
+    .remove {
+      width: vw(27px);
+      height: vw(27px);
+
+      &::before {
+        width: vw(14px);
+      }
+    }
+  }
+
+
+  .checkout-block {
+    margin-bottom: vw(80px);
+  }
+  .form-part {
+    margin-bottom: vw(60px);
+  }
+  .form-title {
+    padding-bottom: vw(15px);
+    margin-bottom: vw(15px);
+    font-size: vw(18px);
+  }
+  .form-part__inputs {
+    gap: vw(24px);
+
+    .input-wrap {
+      //12px
+      width: calc(50% - 0.7500vw);
+    }
+  }
+  .input-radio {
+    .radio-input {
+      padding-left: vw(30px);
+
+      strong {
+        margin-bottom: vw(6px);
+      }
+
+      &::before {
+        width: vw(21px);
+        height: vw(21px);
+      }
+
+      &::after {
+        width: vw(13px);
+        height: vw(13px);
+        left: vw(4px);
+        top: vw(4px);
+      }
     }
   }
   //  done
