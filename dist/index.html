@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="prevstyles" style="--col: #FF5112">
+<div class="prevstyles" style="--col: #2FDADF">
     <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
         <symbol id="icon-desktop" viewBox="0 0 24 17">
             <title>
@@ -83,13 +83,13 @@
     </svg>
 
     <header class="header">
-        <div class="logo" style="background: #FF5112">
-            <img src="./prevstyle/logo1.svg" alt="">
+        <div class="logo" style="background: #000000">
+            <img src="./prevstyle/log.svg" alt="">
 
         </div>
         <div class="header-cont">
             <div class="date-update">
-                <p><strong id="title"></strong> updated <span class="date" id="DATE">22.09.2024</span>, <small></small>
+                <p><strong id="title"></strong> updated <span class="date" id="DATE">26.09.2024</span>, <small></small>
                     pages</p>
             </div>
             <div class="type-of-size">
@@ -157,33 +157,33 @@
 
     </main>
 
-<script>
-    let title = document.title;
+    <script>
+        let title = document.title;
 
-    document.getElementById('title').innerHTML = title;
+        document.getElementById('title').innerHTML = title;
 
-    var iframe = document.getElementById('frame-frame');
-    var body = document.querySelectorAll('body')[0];
-    var previewWrapper = document.getElementById('frame');
-    let pagesArr = ['home', 'product1', 'product2', 'product-text', 'shoppingbag', 'checkout'];
-
-
-    let pgList = document.querySelector('.page-list ol');
-
-    function appendPages() {
-        pagesArr.forEach((pg, k) => {
-            let classP = '';
-            let li = document.createElement('li');
-            if (k === 0) {
-                classP = 'active';
-                iframe.src = `./${pg}.html`;
-                li.classList.add(classP);
-            } else {
-                classP = '';
-            }
+        var iframe = document.getElementById('frame-frame');
+        var body = document.querySelectorAll('body')[0];
+        var previewWrapper = document.getElementById('frame');
+        let pagesArr = ['home', 'product1', 'product2', 'product-text', 'shoppingbag', 'checkout', 'thanks', 'textual', 'contact-us', 'page404'];
 
 
-            li.innerHTML = `
+        let pgList = document.querySelector('.page-list ol');
+
+        function appendPages() {
+            pagesArr.forEach((pg, k) => {
+                let classP = '';
+                let li = document.createElement('li');
+                if (k === 0) {
+                    classP = 'active';
+                    iframe.src = `./${pg}.html`;
+                    li.classList.add(classP);
+                } else {
+                    classP = '';
+                }
+
+
+                li.innerHTML = `
                     <a href="./${pg}.html">${pg}</a>
                     <a href="./${pg}.html" class="link">
                         <svg class="icon icon-link">
@@ -191,141 +191,141 @@
                         </svg>
                     </a>
                `;
-            pgList.appendChild(li);
-        })
-    }
-
-    appendPages();
-    var navs = document.querySelectorAll('.type-of-size ul li a');
-
-    let listCol = [...document.querySelectorAll('.page-list ol li')];
-    var scrollbarwidth = getScrollbarWidth();
-    document.querySelector('.date-update small').innerHTML = listCol.length;
-    let today = new Date();
-    const yyyy = today.getFullYear();
-    let mm = today.getMonth() + 1; // Months start at 0!
-    let dd = today.getDate();
-
-    if (dd < 10) dd = '0' + dd;
-    if (mm < 10) mm = '0' + mm;
-
-    today = dd + '.' + mm + '.' + yyyy;
-
-    // document.getElementById('DATE').innerHTML = today;
-
-
-    function getScrollbarWidth() {
-        var outer = document.createElement("div");
-        outer.style.visibility = "hidden";
-        outer.style.width = "100px";
-        outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
-
-        document.body.appendChild(outer);
-
-        var widthNoScroll = outer.offsetWidth;
-        // force scrollbars
-        outer.style.overflow = "scroll";
-
-        // add innerdiv
-        var inner = document.createElement("div");
-        inner.style.width = "100%";
-        outer.appendChild(inner);
-
-        var widthWithScroll = inner.offsetWidth;
-
-        // remove divs
-        outer.parentNode.removeChild(outer);
-
-        return widthNoScroll - widthWithScroll;
-    }
-
-
-    var previewButtons = document.querySelectorAll('.page-list a:not(.link)');
-
-    function removeActive() {
-        [].forEach.call(previewButtons, function (button) {
-            button.closest('li').classList.remove('active');
-        });
-    }
-
-    [].forEach.call(previewButtons, function (button) {
-        button.addEventListener('click', function (event) {
-
-            if (window.innerWidth < 780) {
-                return;
-            }
-            event.preventDefault();
-            removeActive();
-            var el = event.currentTarget;
-            el.closest('li').classList.add('active');
-            iframe.src = el.href;
-        }, false);
-    });
-
-    var mode = 'wide';
-    [].forEach.call(navs, function (nav) {
-        nav.addEventListener('click', function (event) {
-            event.preventDefault();
-            mode = event.currentTarget.dataset.mode;
-            iframe.style.width = parseInt(event.currentTarget.getAttribute('data-width')) + parseInt(scrollbarwidth) + 'px';
-
-            body.setAttribute('data-mode', 'is-' + mode);
-
-
-            [].forEach.call(navs, function (nav) {
-                nav.classList.remove('active');
+                pgList.appendChild(li);
             })
-            event.currentTarget.classList.add('active');
-
-            setIframeWidth();
-        }, false);
-
-        function setIframeWidth() {
-            // getting preview area width
-            var pwidth = previewWrapper.offsetWidth;
-            var pheight = previewWrapper.offsetHeight;
-
-            // iframe width
-            var iwidth = iframe.offsetWidth;
-            var iheight = iframe.offsetHeight;
-
-            var scaleV = pheight / iheight;
-            var scaleH = pwidth / iwidth;
-
-            if (mode == 'mobile') {
-                iframe.style.transform = 'scale(' + 1 + ')';
-                iframe.style.height = pheight + 'px';
-
-
-                return;
-            }
-            if (scaleH > 1) {
-                scaleH = 1;
-            }
-            iframe.style.transform = 'scale(' + scaleH + ')';
-
-            iframe.style.height = pheight / scaleH + 'px';
-            // console.log(pheight*(2 - scaleV) + 'px');
-
-            var realheight = iframe.getBoundingClientRect().height;
-
-            if (realheight > pheight) {
-                iframe.style.transform = 'scale(' + scaleV + ')';
-            }
-
-
-            console.log(scaleV, scaleH);
         }
 
-        setIframeWidth();
-        // resize event
-        window.addEventListener("resize", function () {
-            setIframeWidth();
+        appendPages();
+        var navs = document.querySelectorAll('.type-of-size ul li a');
+
+        let listCol = [...document.querySelectorAll('.page-list ol li')];
+        var scrollbarwidth = getScrollbarWidth();
+        document.querySelector('.date-update small').innerHTML = listCol.length;
+        let today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+
+        if (dd < 10) dd = '0' + dd;
+        if (mm < 10) mm = '0' + mm;
+
+        today = dd + '.' + mm + '.' + yyyy;
+
+        // document.getElementById('DATE').innerHTML = today;
+
+
+        function getScrollbarWidth() {
+            var outer = document.createElement("div");
+            outer.style.visibility = "hidden";
+            outer.style.width = "100px";
+            outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+            document.body.appendChild(outer);
+
+            var widthNoScroll = outer.offsetWidth;
+            // force scrollbars
+            outer.style.overflow = "scroll";
+
+            // add innerdiv
+            var inner = document.createElement("div");
+            inner.style.width = "100%";
+            outer.appendChild(inner);
+
+            var widthWithScroll = inner.offsetWidth;
+
+            // remove divs
+            outer.parentNode.removeChild(outer);
+
+            return widthNoScroll - widthWithScroll;
+        }
+
+
+        var previewButtons = document.querySelectorAll('.page-list a:not(.link)');
+
+        function removeActive() {
+            [].forEach.call(previewButtons, function (button) {
+                button.closest('li').classList.remove('active');
+            });
+        }
+
+        [].forEach.call(previewButtons, function (button) {
+            button.addEventListener('click', function (event) {
+
+                if (window.innerWidth < 780) {
+                    return;
+                }
+                event.preventDefault();
+                removeActive();
+                var el = event.currentTarget;
+                el.closest('li').classList.add('active');
+                iframe.src = el.href;
+            }, false);
         });
 
+        var mode = 'wide';
+        [].forEach.call(navs, function (nav) {
+            nav.addEventListener('click', function (event) {
+                event.preventDefault();
+                mode = event.currentTarget.dataset.mode;
+                iframe.style.width = parseInt(event.currentTarget.getAttribute('data-width')) + parseInt(scrollbarwidth) + 'px';
 
-    });
-</script>
+                body.setAttribute('data-mode', 'is-' + mode);
 
+
+                [].forEach.call(navs, function (nav) {
+                    nav.classList.remove('active');
+                })
+                event.currentTarget.classList.add('active');
+
+                setIframeWidth();
+            }, false);
+
+            function setIframeWidth() {
+                // getting preview area width
+                var pwidth = previewWrapper.offsetWidth;
+                var pheight = previewWrapper.offsetHeight;
+
+                // iframe width
+                var iwidth = iframe.offsetWidth;
+                var iheight = iframe.offsetHeight;
+
+                var scaleV = pheight / iheight;
+                var scaleH = pwidth / iwidth;
+
+                if (mode == 'mobile') {
+                    iframe.style.transform = 'scale(' + 1 + ')';
+                    iframe.style.height = pheight + 'px';
+
+
+                    return;
+                }
+                if (scaleH > 1) {
+                    scaleH = 1;
+                }
+                iframe.style.transform = 'scale(' + scaleH + ')';
+
+                iframe.style.height = pheight / scaleH + 'px';
+                // console.log(pheight*(2 - scaleV) + 'px');
+
+                var realheight = iframe.getBoundingClientRect().height;
+
+                if (realheight > pheight) {
+                    iframe.style.transform = 'scale(' + scaleV + ')';
+                }
+
+
+                console.log(scaleV, scaleH);
+            }
+
+            setIframeWidth();
+            // resize event
+            window.addEventListener("resize", function () {
+                setIframeWidth();
+            });
+
+
+        });
+    </script>
+</div>
 </body>
 </html>

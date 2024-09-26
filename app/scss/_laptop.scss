@@ -797,7 +797,7 @@
     }
 
     textarea {
-      height: vw(120px);
+      height: vw(150px);
     }
   }
   .shopping-right__btns {
@@ -904,5 +904,292 @@
       }
     }
   }
+
+  .mini-cart {
+    margin-top: vw(20px);
+    right: vw(130px);
+    width: vw(490px);
+
+    .cls-mc {
+      width: vw(20px);
+      height: vw(20px);
+      top: vw(5px);
+      right: vw(5px);
+
+      span {
+        width: vw(16px);
+      }
+    }
+
+    .shopping-right__text {
+      padding: vw(29px) vw(45px) vw(20px);
+
+      .btn {
+        font-size: vw(20px);
+        margin-top: vw(20px);
+      }
+    }
+
+    .mini-cart__list {
+      padding: vw(18px) vw(45px) vw(30px);
+    }
+
+    .cart-item {
+      .img {
+        width: vw(60px);
+        height: vw(60px);
+      }
+    }
+  }
+
+  .thanks {
+    padding: vw(30px) 0 vw(100px);
+
+    &__cont {
+      max-width: vw(916px);
+
+      .subtitle {
+        margin-bottom: vw(20px);
+      }
+    }
+
+    .ord-numb {
+      strong {
+        padding: vw(5px);
+      }
+    }
+  }
+  .order-details {
+    margin-top: vw(60px);
+
+    &__ship {
+      gap: vw(40px);
+      margin-top: vw(20px);
+      margin-bottom: vw(60px);
+
+      .txt {
+        max-width: vw(200px);
+      }
+
+      &-detail {
+        width: vw(536px);
+        padding: vw(25px) vw(24px);
+      }
+    }
+
+    &__side {
+      margin-top: vw(35px);
+      gap: vw(130px);
+    }
+
+    &__right {
+      width: vw(362px);
+
+      > span {
+        margin-bottom: vw(5px);
+      }
+
+      .cart-item {
+        margin-bottom: vw(20px);
+
+        .img {
+          width: vw(60px);
+          height: vw(60px);
+        }
+      }
+    }
+
+    &__left {
+      ul {
+        li {
+          padding: vw(5px) 0;
+        }
+      }
+    }
+  }
+
+  .about-us {
+    padding: vw(30px) 0 vw(60px);
+
+    &__top {
+      gap: vw(24px);
+    }
+
+    &__center {
+      margin-top: vw(70px);
+      gap: vw(60px) vw(30px);
+
+      .txt {
+        //15px
+        width: calc(50% - 0.9375vw);
+      }
+    }
+
+    .txt {
+      span, h2 {
+        &:not(.subtitle) {
+          font-size: vw(24px);
+        }
+
+        margin-bottom: vw(20px);
+      }
+
+      p {
+        margin-bottom: vw(15px);
+      }
+    }
+
+    &__images {
+      width: vw(878px);
+      grid-gap: vw(23px);
+    }
+  }
+
+  .products-like {
+    &.products-like--dark {
+      padding: vw(60px) 0;
+    }
+  }
+  .products-like__top {
+    margin-bottom: vw(50px);
+
+    .subtitle {
+      margin-bottom: 0;
+    }
+
+    .btn--big {
+      font-size: vw(20px);
+      width: vw(390px);
+    }
+  }
+
+  .article {
+    padding: vw(30px) 0 vw(60px);
+  }
+  .textual-page {
+    max-width: vw(1134px);
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: vw(20px);
+    }
+
+    h2, h3 {
+      font-size: vw(24px);
+    }
+
+    h4, h5, h6 {
+      font-size: vw(20px);
+    }
+
+    h1 {
+      margin-bottom: vw(40px);
+    }
+
+    p {
+      margin-top: vw(20px);
+    }
+
+    p, li {
+      font-size: vw(14px);
+    }
+
+    ul {
+      margin-top: vw(20px);
+
+      li {
+        padding-left: vw(14px);
+
+        &::before {
+          width: vw(5px);
+          height: vw(5px);
+          top: vw(9px);
+          left: vw(4px);
+        }
+      }
+    }
+
+    ol {
+      margin-top: vw(20px);
+
+      li {
+        padding-left: vw(14px);
+      }
+    }
+  }
+  .contact {
+    padding: vw(30px) 0 vw(100px);
+
+    &__top {
+      margin-top: vw(40px);
+      gap: vw(24px);
+    }
+
+    &__left, &__right {
+      .form-title {
+        margin-bottom: vw(35px);
+      }
+    }
+
+    &__right {
+      width: vw(877px);
+    }
+
+    &__center {
+      margin: vw(60px) 0 0;
+      padding: vw(56px) vw(36px);
+      gap: vw(36px);
+    }
+
+    &__form {
+      .btn {
+        font-size: vw(20px);
+        width: vw(390px);
+      }
+
+      .form-part__inputs {
+        margin-bottom: vw(15px);
+      }
+    }
+
+    &__img {
+      width: vw(491px);
+    }
+  }
+  .contact-map {
+
+  }
   //  done
+  .page404 {
+    padding: vw(30px) 0 vw(65px);
+
+    &__cont {
+      gap: vw(150px);
+    }
+
+    &__left {
+      width: vw(640px);
+    }
+
+    &__image {
+      width: vw(573px);
+    }
+
+    .txt {
+      span {
+        font-size: vw(24px);
+        margin-bottom: vw(20px);
+        max-width: vw(619px);
+      }
+
+      p {
+        max-width: vw(491px);
+      }
+
+      .btn {
+        font-size: vw(20px);
+        width: vw(390px);
+        margin-top: vw(80px);
+      }
+    }
+  }
 }
