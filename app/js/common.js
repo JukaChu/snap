@@ -218,7 +218,6 @@ function startProductSlider() {
 startProductSlider();
 
 
-
 let variantsSlider = [...document.querySelectorAll('.variants__slider')];
 
 function startVariants() {
@@ -364,7 +363,7 @@ $(document).on('click', '.js-minus', function (e) {
 $(document).on('click', '.js-plus', function (e) {
 
     var t = parseInt($(this).prev().find('input').val());
-    var max=parseInt($(this).prev().find('input').attr('max') ? $(this).prev().find('input').attr('max') : 1000);
+    var max = parseInt($(this).prev().find('input').attr('max') ? $(this).prev().find('input').attr('max') : 1000);
     if (t + 1 <= max) {
         $(this).prev().find('input').val(+t + 1);
         if ($('body').hasClass('page-template-cart')) {
@@ -417,5 +416,25 @@ $('body').on('click', '.btn-to', function (e) {
     }, 600);
 
 });
+
+let addToMenu = [...document.querySelectorAll('.menu > ul > li.menu-item-has-children > a')];
+
+function addingArrowBtn() {
+    if (addToMenu.length) {
+        addToMenu.forEach((bt) => {
+            let newArr = document.createElement('div');
+            newArr.classList.add('arr-btn');
+            newArr.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                newArr.closest('li').classList.toggle('open');
+            });
+            bt.appendChild(newArr);
+        })
+    }
+
+}
+
+addingArrowBtn();
 
 

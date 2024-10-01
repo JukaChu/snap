@@ -1158,7 +1158,7 @@
   .contact-map {
 
   }
-  //  done
+
   .page404 {
     padding: vw(30px) 0 vw(65px);
 
@@ -1189,6 +1189,46 @@
         font-size: vw(20px);
         width: vw(390px);
         margin-top: vw(80px);
+      }
+    }
+  }
+  //  done
+
+  .header {
+    .menu {
+
+      > ul {
+        > li {
+          &.menu-item-has-children {
+            > a {
+              padding-right: vw(24px);
+              &::after {
+                width: vw(20px);
+                height: vw(20px);
+              }
+            }
+          }
+          > ul {
+            &::before {
+              height: vw(44px);
+            }
+            //1420px
+            padding-left: calc((100vw - 88.7500vw) / 2);
+            padding-right: calc((100vw - 88.7500vw) / 2);
+            padding-top: vw(40px);
+            padding-bottom: vw(40px);
+            gap: vw(100px);
+            > li {
+              > a {
+                margin-bottom: vw(10px);
+              }
+            }
+          }
+        }
+      }
+      .current-image {
+        width: vw(300px);
+        max-height: vw(300px);
       }
     }
   }
