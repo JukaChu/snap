@@ -190,6 +190,7 @@
     padding-bottom: vw(50px);
   }
   .hero-slider {
+    height: calc(50vh - var(--headerheight));;
     .slider-btn {
       display: none;
     }

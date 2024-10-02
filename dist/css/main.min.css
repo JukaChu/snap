@@ -6889,6 +6889,9 @@ body {
     padding-top: 12.8205128205vw;
     padding-bottom: 12.8205128205vw;
   }
+  .hero-slider {
+    height: calc(50vh - var(--headerheight));
+  }
   .hero-slider .slider-btn {
     display: none;
   }
